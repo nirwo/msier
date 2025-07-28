@@ -1,0 +1,41 @@
+<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        Title="Modern Remote MSI Installer" Height="550" Width="700"
+        WindowStartupLocation="CenterScreen" Background="#1e1e1e" Foreground="White"
+        FontFamily="Segoe UI">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="CSV File:" Margin="0,10,10,10" VerticalAlignment="Center"/>
+        <TextBox Name="CsvPath" Grid.Row="0" Grid.Column="1" Margin="0,10" />
+        <Button Name="BrowseCsv" Grid.Row="0" Grid.Column="2" Content="Browse" Margin="10,10,0,10"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="MSI File:" Margin="0,10,10,10" VerticalAlignment="Center"/>
+        <TextBox Name="MsiPath" Grid.Row="1" Grid.Column="1" Margin="0,10" />
+        <Button Name="BrowseMsi" Grid.Row="1" Grid.Column="2" Content="Browse" Margin="10,10,0,10"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Username:" Margin="0,10,10,10" VerticalAlignment="Center"/>
+        <TextBox Name="Username" Grid.Row="2" Grid.Column="1" Margin="0,10" />
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Password:" Margin="0,10,10,10" VerticalAlignment="Center"/>
+        <PasswordBox Name="Password" Grid.Row="3" Grid.Column="1" Margin="0,10" />
+
+        <TextBox Name="OutputBox" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" 
+                 Margin="0,10" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" 
+                 Background="#252526" Foreground="LightGreen" FontFamily="Consolas" />
+
+        <Button Name="StartInstall" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3"
+                Content="Start Installation" Margin="0,10" Height="35" Background="#007ACC"/>
+    </Grid>
+</Window>
